@@ -1,5 +1,5 @@
 {
-  "name": "slint",
+  "name": "splee",
   "version": "0.0.1",
   "description": "Find, Diagnose and fix problems in your JavaScript code.",
   "main": "src/index.js",
@@ -8,14 +8,14 @@
     "install": "npm link"
   },
   "bin": {
-    "slint": "src/index.js"
+    "splee": "src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bobbbay/slint.git"
+    "url": "git+https://github.com/Bobbbay/splee.git"
   },
   "keywords": [
-    "slint",
+    "splee",
     "lint",
     "js",
     "javascript",
@@ -26,7 +26,7 @@
   "author": "Bobbbay Bobbayan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bobbbay/slint/issues"
+    "url": "https://github.com/Bobbbay/splee/issues"
   },
-  "homepage": "https://github.com/Bobbbay/slint#readme"
+  "homepage": "https://github.com/Bobbbay/splee#readme"
 }
