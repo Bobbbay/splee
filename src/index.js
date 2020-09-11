@@ -1,3 +1,51 @@
 #!/usr/bin/env node
 
-console.log("Hey!");
+const lintFile = require("./modules/lintFile.js");
+
+var yargs = require("yargs");
+var argv = yargs
+  .usage("Usage: $0 <command> <file> [options]")
+  .command("lint", "Lint a file")
+  .example("$0 lint src/index.js", "Lint src/index.js")
+  .demandCommand(1)
+  .alias("f", "file")
+  .nargs("f", 1)
+  .demandOption(["f"])
+  .count("verbose")
+  .alias("v", "verbose")
+  .help("h")
+  .alias("h", "help")
+  .epilog("Copyright 2020").argv;
+
+const chalk = require("chalk");
+
+switch (argv._[0]) {
+  case "lint":
+    lintFile.lint(argv.f, (verbose = argv.verbose));
+    break;
+  default:
+}
+
+/*yargs(hideBin(process.argv))
+  .command(
+    "lint",
+    "Lint a file, or recursively a directory",
+    () => {},
+    (argv) => {
+      console.log(argv);
+      lintFile(argv._[1]);
+    }
+  )
+  .demandCommand(1).argv;
+
+/*
+console.log(argv);
+
+switch (argv._[0]) {
+  case undefined:
+    console.log("Nothing to do!");
+    break;
+  default:
+    lintFile(argv._[0]);
+}
+*/
