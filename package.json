@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/Bobbbay/splee#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "yargs": "^16.0.3"
   }
 }
