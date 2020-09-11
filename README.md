@@ -1,2 +1,9 @@
-# slint
-Find, Diagnose and fix problems in your JavaScript code.
+# Splee
+
+Find, Diagnose and fix problems in your all of your code.
+
+## Install
+
+```bash
+npm i -g splee
+```

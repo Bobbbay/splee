@@ -1,0 +1,32 @@
+{
+  "name": "splee",
+  "version": "0.0.2",
+  "description": "Find, Diagnose and fix problems in your JavaScript code.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm link"
+  },
+  "bin": {
+    "splee": "src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobbbay/splee.git"
+  },
+  "keywords": [
+    "splee",
+    "lint",
+    "js",
+    "javascript",
+    "es6",
+    "checking",
+    "linter"
+  ],
+  "author": "Bobbbay Bobbayan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bobbbay/splee/issues"
+  },
+  "homepage": "https://github.com/Bobbbay/splee#readme"
+}
