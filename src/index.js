@@ -3,11 +3,7 @@
 const lintFile = require("./modules/lintFile.js");
 
 var yargs = require("yargs");
-var argv = yargs.argv;
-
-const chalk = require("chalk");
-
-yargs
+var argv = yargs
   .usage("Usage: $0 <command> <file> [options]")
   .command("lint", "Lint a file")
   .example("$0 lint src/index.js", "Lint src/index.js")
@@ -15,14 +11,17 @@ yargs
   .alias("f", "file")
   .nargs("f", 1)
   .demandOption(["f"])
-  .alias(["v"])
+  .count("verbose")
+  .alias("v", "verbose")
   .help("h")
   .alias("h", "help")
   .epilog("Copyright 2020").argv;
 
+const chalk = require("chalk");
+
 switch (argv._[0]) {
   case "lint":
-    lintFile.lint(argv.f);
+    lintFile.lint(argv.f, (verbose = argv.verbose));
     break;
   default:
 }
